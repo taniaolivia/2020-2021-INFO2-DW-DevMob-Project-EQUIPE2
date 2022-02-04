@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~leaflet/dist/leaflet.css";
+html, body 
+{
+	margin: 0; /* supprime les marge html et body */
+    padding: 0;
+    height: 100%;
+    scroll-behavior: smooth; /* les encres sont atteint en douceur et non en téléportation directe*/
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+body
+{
+    display: table;
+    width: 100%;
+}
+
+/* div pour permettre la mise en place automatique du footer en bas de page */
+#main
+{
+    min-height:100%;
+    margin:0 auto;
+    position:relative;
+}

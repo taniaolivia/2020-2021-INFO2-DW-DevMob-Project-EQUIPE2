@@ -1,0 +1,70 @@
+#meteo
+{
+    min-height: 30%;
+    background: linear-gradient(rgb(7, 32, 145), rgb(27, 157, 209));
+    color: rgba(255, 255, 255, 0.842);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-decoration:none;
+    box-shadow: 0 0 5px #333;
+    margin : 5px;
+}
+
+#meteo > h1
+{
+    text-align: center;
+    font-size: 17px;
+}
+
+#meteo .fa-thermometer-three-quarters
+{
+    font-size: 35px;
+    color: rgb(180, 3, 3);
+}
+
+#temperature
+{
+    margin-left: 5px;
+    font-size: 30px;
+}
+
+#temperatureRessenti
+{
+    font-size: 13px;
+}
+
+#vent
+{
+    font-size: 13px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+
+#containeurTemperatures
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#svgMeteoPlusVent
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#imageMeteo
+{
+    margin: auto;
+}
+
+#containeurMeteoSansTitre
+{
+    display: flex;
+    justify-content: space-around;
+}

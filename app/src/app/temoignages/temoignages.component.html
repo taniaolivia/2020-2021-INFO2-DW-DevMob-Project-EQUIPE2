@@ -1,0 +1,19 @@
+<div id="titreTemoignages">
+  <h1>Témoignages {{data[0].bateauTemoignages.nom}}</h1>
+</div>
+
+<div *ngFor = "let temoignages of data" id="container">
+  <div id="auteurTemoignage">
+    <h2>{{temoignages.auteur}}</h2>
+  </div>
+  <div id="photo">
+    <img src="{{temoignages.photo}}">
+  </div>
+  <div id="descriptionTemoignage">
+    <p>{{temoignages.description}}</p>
+  </div>
+  <div id="audio">
+    <audio src="{{temoignages.audio}}"></audio>
+  </div>
+  <hr>
+</div>

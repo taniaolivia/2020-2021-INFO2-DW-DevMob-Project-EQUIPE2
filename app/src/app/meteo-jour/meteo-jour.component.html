@@ -1,0 +1,18 @@
+<a [routerLink]="['meteo']" id="meteo">
+    <h1>La Rochelle</h1>
+    <div id="containeurMeteoSansTitre">
+        <div id="containeurTemperatures">
+            <div>
+                <i class="fas fa-thermometer-three-quarters"></i>
+                <span id="temperature">{{ items.current.temperature }} °C</span>
+            </div>
+            <div>
+                <span id="temperatureRessenti">Ressenti : {{ items.current.feelslike }} °C</span>
+            </div>
+        </div>
+        <div id="svgMeteoPlusVent">
+            <img id="imageMeteo" alt="imageMeteo" src="../assets/imagesMeteo/sunCloud.svg" width="110px">
+            <span id="vent">Vent : {{ items.current.wind_speed }} km/h</span>
+        </div>
+    </div>
+</a>

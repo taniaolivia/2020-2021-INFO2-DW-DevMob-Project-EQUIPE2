@@ -1,0 +1,58 @@
+<section>
+
+  <h1>
+    <img src = "assets/imagesPlanning/planning.gif">
+      PLANNING
+    <img src = "assets/imagesPlanning/planning.gif">
+  </h1>
+
+  <h2>{{data.bateau.nom}}</h2>
+
+  <p>Semaine du {{data.creneau[0].date| date : 'dd/MM/yyyy'}} au {{data.creneau[40].date| date : 'dd/MM/yyyy'}}</p>
+
+<table>
+  <tr>
+    <th class="date">Lundi, {{data.creneau[0].date| date : 'dd/MM/yyyy'}}</th>
+    <div *ngFor = 'let i of counter(8, 0)'>
+      {{getStyle()}}
+        <td class="td"  routerLink = '/reservation/{{data.bateau.nomunique}}/{{data.creneau[i].date}}'>{{data.creneau[i].date | date: "HH:mm"}} <br> {{data.creneau[i].nbPlaceRestante}} places</td>
+    </div>
+  </tr>
+
+  <tr>
+    <th class="date">Mardi, {{data.creneau[8].date| date : 'dd/MM/yyyy'}}</th>
+      <div *ngFor = 'let i of counter(8, 8)'>
+          <td class="td" routerLink = '/reservation/{{data.bateau.nomunique}}/{{data.creneau[i].date}}'>{{data.creneau[i].date | date: "HH:mm"}} <br> {{data.creneau[i].nbPlaceRestante}} places</td>
+      </div>
+  </tr>
+
+  <tr>
+    <th class="date">Mercredi, {{data.creneau[16].date| date : 'dd/MM/yyyy'}}</th>
+      <div *ngFor = 'let i of counter(8, 16)'>
+          <td class="td" routerLink = '/reservation/{{data.bateau.nomunique}}/{{data.creneau[i].date}}'>{{data.creneau[i].date | date: "HH:mm"}} <br> {{data.creneau[i].nbPlaceRestante}} places</td>
+      </div>
+  </tr>
+
+  <tr>
+    <th class="date">Jeudi, {{data.creneau[24].date| date : 'dd/MM/yyyy'}}</th>
+      <div *ngFor = 'let i of counter(8, 24)'>
+          <td class="td" routerLink = '/reservation/{{data.bateau.nomunique}}/{{data.creneau[i].date}}'>{{data.creneau[i].date | date: "HH:mm"}} <br> {{data.creneau[i].nbPlaceRestante}} places</td>
+      </div>
+  </tr>
+
+  <tr>
+    <th class="date">Vendredi, {{data.creneau[32].date| date : 'dd/MM/yyyy'}}</th>
+      <div *ngFor = 'let i of counter(8, 32)'>
+          <td class="td" routerLink = '/reservation/{{data.bateau.nomunique}}/{{data.creneau[i].date}}'>{{data.creneau[i].date | date: "HH:mm"}} <br> {{data.creneau[i].nbPlaceRestante}} places</td>
+      </div>
+  </tr>
+
+  <tr>
+    <th class="date">Samedi, {{data.creneau[40].date| date : 'dd/MM/yyyy'}}</th>
+      <div *ngFor = 'let i of counter(8, 40)'>
+          <td colspan="2" class="td" routerLink = '/reservation/{{data.bateau.nomunique}}/{{data.creneau[i].date}}'>{{data.creneau[i].date | date: "HH:mm"}} <br> {{data.creneau[i].nbPlaceRestante}} places</td>
+      </div>
+  </tr>
+</table>
+
+</section>

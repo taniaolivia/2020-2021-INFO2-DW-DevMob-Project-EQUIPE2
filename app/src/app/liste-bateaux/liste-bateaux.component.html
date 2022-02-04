@@ -1,0 +1,19 @@
+<section>
+
+  <div id="titreLaFlotte">
+    <img id="boat1" src="https://media.giphy.com/media/g0yCDwwBxLJyFd9RYB/giphy.gif">
+      <h1>LA FLOTTE</h1>
+    <img id="boat2" src="https://media.giphy.com/media/g0yCDwwBxLJyFd9RYB/giphy.gif">
+  </div>
+
+  <div *ngFor = "let bateaux of data" id = "container1" >
+    <a routerLink = '../detailsbateau/{{bateaux.nomunique}}'>
+      <div id="container2">
+        <img src="{{bateaux.photo}}">
+        <h2>{{bateaux.nom}}</h2>
+      </div>
+    </a>
+  </div>
+
+</section>
+

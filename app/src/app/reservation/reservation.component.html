@@ -1,0 +1,20 @@
+<h1>Réservation</h1>
+
+<h2>{{data.bateau.nom}}</h2>
+
+<form id="reservationFormulaire" [formGroup]="formGroup">
+
+  <input id="creneauSelectionne" class="form-control" placeholder="{{date | date: 'HH:mm'}}" disabled>
+
+  <input id="nbPlacesDispo" class="form-control" disabled> {{afficherPlaces()}}
+
+  <input type="number" id="nbPlacesReserver" class="form-control" placeholder="Nombre de places à réserver"
+  formControlName="nbPlacesReservees">
+
+  <button type="button" class="btn btn-primary" type="submit" (click)="getInputValue()">Réserver</button>
+
+</form>
+
+<div id="messageConteneur">
+  <p id="confirmationReservation">Votre réservation a été enregistré &nbsp;&nbsp;<i class="fas fa-check"></i></p>
+</div>

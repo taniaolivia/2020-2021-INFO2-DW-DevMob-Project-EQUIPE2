@@ -1,0 +1,24 @@
+<section>
+  <div id="conteneurGeneral">
+      <div id="titreDetails">
+          <h1>DÉTAILS DU BATEAU</h1>
+      </div>
+
+      <div id="photo">
+          <img src="{{data.photo}}" alt="Image indisponible">
+      </div>
+      <div id="titre">
+          <h2> {{data.nom}} </h2>
+      </div>
+
+      <div id="description">
+          <p> {{data.description}} </p>
+      </div>
+  </div>
+
+  <div id="boutonsRedirection">
+      <a [ngStyle]="{'display':data.visitable === false ? 'none' : 'flex'}" routerLink = '../../planning/{{data.nomunique}}' id="reservationDisplay" type="button" class="btn btn-primary">Planning</a>
+
+      <a routerLink = '../../{{data.nomunique}}/temoignages' type="button" class="btn btn-primary">Témoignages</a>
+  </div>
+</section>
